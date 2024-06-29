@@ -64,4 +64,28 @@ button {
 #home {
   border-radius: 7em;
 }
+.clock {
+  display: none;
+}
 
+.show.clock {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: blueviolet;
+  color: white;
+  min-width: 375px;
+  max-width: 430px;
+  height: 80vh;
+  width: 100%;
+  margin: 5vh 0vw 15vh 0vw;
+  z-index: 300;
+  
+  #clockdisplay {
+    font-size: 5em;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background-color: rgb(60, 0, 90);
+  }
+}
