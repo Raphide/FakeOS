@@ -5,6 +5,8 @@ const clock = document.getElementById("clockTop");
 const clockMod = document.querySelector(".clock");
 const clockDisp = document.getElementById("clockdisplay");
 const clockApp = document.getElementById("app app--clock");
+const notes = document.querySelector(".notes");
+const notesApp = document.getElementById("app app--notes");
 
 /// Clock
 function nowTime() {
@@ -31,12 +33,18 @@ setInterval(nowTime, 1000);
 ///App buttons===============================
 home.addEventListener("click", () => {
   calculator.classList.remove("show");
+  notes.classList.remove("show");
   clockMod.classList.remove("show");
 });
 
 calcapp.addEventListener("click", () => {
   calculator.classList.add("show");
 });
+
+notesApp.addEventListener("click", () => {
+notes.classList.add("show");
+});
+
 
 clockApp.addEventListener("click", () => {
   clockMod.classList.add("show");
