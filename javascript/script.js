@@ -2,6 +2,8 @@ const home = document.getElementById("home");
 const calcapp = document.getElementById("app app--calc");
 const calculator = document.querySelector(".calculator");
 const clock = document.getElementById("clock");
+const notes = document.querySelector(".notes");
+const notesApp = document.getElementById("app app--notes");
 
 /// Clock
 function nowTime() {
@@ -27,10 +29,16 @@ setInterval(nowTime, 1000);
 ///App buttons===============================
 home.addEventListener("click", () => {
   calculator.classList.remove("show");
+  notes.classList.remove("show");
 });
 
 calcapp.addEventListener("click", () => {
   calculator.classList.add("show");
 });
+
+notesApp.addEventListener("click", () => {
+notes.classList.add("show");
+});
+
 ///===============================
 
