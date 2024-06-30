@@ -3,7 +3,7 @@ body {
 }
 
 #background {
-  background-color: teal;
+  background-color: #000000;
   min-width: 375px;
   max-width: 430px;
   min-height: 667px;
@@ -17,13 +17,17 @@ body {
 }
 
 #topbar {
-  background-color: darkslategray;
+  background-color: #0c0808;
   min-width: 375px;
   max-width: 430px;
   height: 5vh;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+#topbar #battery {
+  height: 2.75em;
+  width: 2.75em;
 }
 #topbar .temp {
   color: white;
@@ -40,16 +44,23 @@ main {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  background-image: url(../../images/TPtop.jpeg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 60vh;
 }
 
 #bottombar {
-  background-color: darkslategray;
+  background-color: #000000;
   min-width: 375px;
   max-width: 430px;
   height: 15vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  background-image: url(../../images/TPbottom.jpeg);
+  background-position: top;
+  background-size: 100%;
 }
 
 button {
@@ -58,9 +69,17 @@ button {
   background-color: white;
   margin: 1em 1em 1em 1em;
   border-radius: 15px;
+  border: none;
+  background-image: url(../../images/marble.png);
+  background-position: center;
+  box-shadow: -4px -2px 5px 0px rgba(0, 0, 0, 0.56) inset;
+}
+button:active {
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.55) inset;
 }
 
 #home {
   border-radius: 7em;
 }
 
+/*# sourceMappingURL=styles.css.map */
