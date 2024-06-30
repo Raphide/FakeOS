@@ -40,6 +40,5 @@ calcapp.addEventListener("click", () => {
 
 clockApp.addEventListener("click", () => {
   clockMod.classList.add("show");
-})
+});
 ///===============================
-
