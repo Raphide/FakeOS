@@ -1,7 +1,7 @@
 const home = document.getElementById("home");
 const calcapp = document.getElementById("app app--calc");
 const calculator = document.querySelector(".calculator");
-const clock = document.getElementById("clock");
+const clock = document.getElementById("clockTop");
 
 /// Clock
 function nowTime() {
