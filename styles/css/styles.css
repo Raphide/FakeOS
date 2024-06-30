@@ -3,7 +3,11 @@ body {
 }
 
 #background {
+<<<<<<< HEAD
   background-color: teal;
+=======
+  background-color: #000000;
+>>>>>>> main
   min-width: 375px;
   max-width: 430px;
   min-height: 667px;
@@ -17,7 +21,11 @@ body {
 }
 
 #topbar {
+<<<<<<< HEAD
   background-color: darkslategray;
+=======
+  background-color: #0c0808;
+>>>>>>> main
   min-width: 375px;
   max-width: 430px;
   height: 5vh;
@@ -25,6 +33,13 @@ body {
   flex-direction: row;
   justify-content: space-around;
 }
+<<<<<<< HEAD
+=======
+#topbar #battery {
+  height: 2.75em;
+  width: 2.75em;
+}
+>>>>>>> main
 #topbar .temp {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
@@ -40,16 +55,33 @@ main {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+<<<<<<< HEAD
 }
 
 #bottombar {
   background-color: darkslategray;
+=======
+  background-image: url(../../images/TPtop.jpeg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 60vh;
+}
+
+#bottombar {
+  background-color: #000000;
+>>>>>>> main
   min-width: 375px;
   max-width: 430px;
   height: 15vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
+<<<<<<< HEAD
+=======
+  background-image: url(../../images/TPbottom.jpeg);
+  background-position: top;
+  background-size: 100%;
+>>>>>>> main
 }
 
 button {
@@ -58,12 +90,23 @@ button {
   background-color: white;
   margin: 1em 1em 1em 1em;
   border-radius: 15px;
+<<<<<<< HEAD
+=======
+  border: none;
+  background-image: url(../../images/marble.png);
+  background-position: center;
+  box-shadow: -4px -2px 5px 0px rgba(0, 0, 0, 0.56) inset;
+}
+button:active {
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.55) inset;
+>>>>>>> main
 }
 
 #home {
   border-radius: 7em;
 }
 
+<<<<<<< HEAD
 .calculator {
   position: fixed;
   background-color: aqua;
@@ -116,4 +159,6 @@ button {
   border-radius: 50px;
 }
 
+=======
+>>>>>>> main
 /*# sourceMappingURL=styles.css.map */
