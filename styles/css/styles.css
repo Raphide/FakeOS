@@ -85,8 +85,6 @@ button #clockbtn {
   border-radius: 7em;
 }
 
-<<<<<<< HEAD
-/*# sourceMappingURL=styles.css.map */
 .clock {
   display: none;
 }
@@ -110,6 +108,8 @@ button #clockbtn {
   font-size: 5em;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   background-color: rgb(60, 0, 90);
+}
+
 .calculator {
   position: fixed;
   background-color: aqua;
@@ -160,7 +160,8 @@ button #clockbtn {
   width: 5.7em;
   margin: 0.5em 0.5em 0em 0.5em;
   border-radius: 50px;
-=======
+}
+
 .show.notes {
   background-color: #ffffff;
   min-width: 375px;
@@ -188,7 +189,6 @@ button #clockbtn {
 
 .notes {
   display: none;
->>>>>>> note-feature
 }
 
 /*# sourceMappingURL=styles.css.map */
