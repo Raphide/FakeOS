@@ -109,6 +109,56 @@ button #clockbtn {
   font-size: 5em;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   background-color: rgb(60, 0, 90);
+.calculator {
+  position: fixed;
+  background-color: aqua;
+  min-width: 375px;
+  max-width: 430px;
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 5vh 0vw 15vh 0vw;
+  display: none;
+}
+.calculator #display {
+  width: 100%;
+  height: 10vh;
+  font-size: 5em;
+}
+.calculator .calcbtn {
+  height: 5.7em;
+  width: 5.7em;
+  margin: 0.5em 0.5em 0em 0.5em;
+  border-radius: 50px;
+}
+
+.show.calculator {
+  position: fixed;
+  background-color: aqua;
+  min-width: 375px;
+  max-width: 430px;
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 5vh 0vw 15vh 0vw;
+  z-index: 200;
+}
+.show.calculator #display {
+  width: 100%;
+  height: 10vh;
+  font-size: 5em;
+}
+.show.calculator .calcbtn {
+  height: 5.7em;
+  width: 5.7em;
+  margin: 0.5em 0.5em 0em 0.5em;
+  border-radius: 50px;
 }
 
 /*# sourceMappingURL=styles.css.map */
