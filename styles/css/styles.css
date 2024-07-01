@@ -74,22 +74,14 @@ button {
   border: none;
 }
 button:active {
-<<<<<<< HEAD
-  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.55) inset;
-}
-button #clockbtn {
-  height: 100%;
-=======
   background-color: rgba(255, 255, 255, 0.75);
   color: #000000;
->>>>>>> calculator-feature
 }
 
 #home {
   border-radius: 7em;
 }
 
-<<<<<<< HEAD
 .clock {
   display: none;
 }
@@ -121,8 +113,6 @@ button #clockbtn {
   width: 80%;
 }
 
-=======
->>>>>>> calculator-feature
 .calculator {
   display: none;
 }
@@ -175,7 +165,6 @@ button #clockbtn {
   color: white;
 }
 
-<<<<<<< HEAD
 .show.notes {
   background-color: #ffffff;
   min-width: 375px;
@@ -205,6 +194,4 @@ button #clockbtn {
   display: none;
 }
 
-=======
->>>>>>> calculator-feature
 /*# sourceMappingURL=styles.css.map */
