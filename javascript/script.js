@@ -48,6 +48,5 @@ notes.classList.add("show");
 
 clockApp.addEventListener("click", () => {
   clockMod.classList.add("show");
-})
+});
 ///===============================
-

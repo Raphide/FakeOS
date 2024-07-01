@@ -99,7 +99,7 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: blueviolet;
+  background-color: rgb(75, 5, 5);
   color: white;
   min-width: 375px;
   max-width: 430px;
@@ -107,11 +107,17 @@ button {
   width: 100%;
   margin: 5vh 0vw 15vh 0vw;
   z-index: 300;
-  
+
   #clockdisplay {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     font-size: 5em;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  background-color: rgb(60, 0, 90);
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    background-color: rgb(52, 26, 26);
+    border-radius: 15px;
+    box-shadow: -8px -7px 24px 9px rgba(0, 0, 0, 0.56) inset;
+    width: 80%;
   }
 }
 
