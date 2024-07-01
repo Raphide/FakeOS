@@ -21,14 +21,25 @@ body {
   z-index: 6;
   background-repeat: no-repeat;
   background-position: bottom;
-  background-size: 60vh;
+  background-size: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.lock h1 {
+  color: #ffffff;
+  z-index: 7;
+  position: fixed;
+  bottom: 10vh;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .lock img {
   position: fixed;
   z-index: 7;
 }
 
-.lock.display-none {
+.lock.hide {
   width: 100%;
   height: 100vh;
   opacity: 0;
@@ -41,7 +52,7 @@ body {
   animation-duration: 0.8s;
   transition: all 1s;
 }
-.lock.display-none img {
+.lock.hide img {
   position: fixed;
   z-index: -7;
 }
@@ -178,22 +189,19 @@ button:active {
 
 .show.clock {
   position: fixed;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(75, 5, 5);
-  background-image: url(../../images/TPtop.jpeg);
-  background-size: 70vh;
-  color: white;
-  min-width: 375px;
-  max-width: 430px;
   height: 80vh;
   width: 100%;
+  display: flex;
+  flex-direction: column;
   margin: 5vh 0vw 15vh 0vw;
   z-index: 2;
   animation-name: animatetop;
   animation-duration: 0.4s;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../../images/TPtop.jpeg);
+  background-size: 70vh;
+  color: white;
 }
 .show.clock #clockdisplay {
   display: flex;
@@ -213,20 +221,19 @@ button:active {
 
 .show.calculator {
   position: fixed;
-  background-color: #d80001;
-  background-image: url(../../images/TPtop.jpeg);
-  background-repeat: no-repeat;
-  background-size: 70vh;
-  width: 100%;
   height: 80vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
   margin: 5vh 0vw 15vh 0vw;
   z-index: 2;
   animation-name: animatetop;
   animation-duration: 0.4s;
+  background-image: url(../../images/TPtop.jpeg);
+  background-repeat: no-repeat;
+  background-size: 70vh;
+  justify-content: flex-start;
+  align-items: center;
 }
 .show.calculator #display {
   width: 90%;
@@ -235,6 +242,9 @@ button:active {
   margin-top: 3vh;
   border: none;
   text-align: end;
+  background-color: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(2px);
+  color: white;
 }
 .show.calculator #keys {
   display: grid;
@@ -263,20 +273,18 @@ button:active {
 }
 
 .show.notes {
-  background-color: #ffffff;
-  min-width: 375px;
-  max-width: 430px;
-  width: 100%;
+  position: fixed;
   height: 80vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
   margin: 5vh 0vw 15vh 0vw;
-  position: fixed;
   z-index: 2;
   animation-name: animatetop;
   animation-duration: 0.4s;
+  background-color: #ffffff;
+  justify-content: flex-start;
+  align-items: center;
 }
 .show.notes h3 {
   font-size: 2em;
