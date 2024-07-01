@@ -11,6 +11,7 @@ const phone = document.getElementById("phonemenu");
 const phoneApp = document.getElementById("app app--phonebook");
 const list = document.getElementById("appslist");
 const listApp = document.getElementById("app app--list");
+const lock = document.querySelector(".lock");
 
 /// Clock
 function nowTime() {
@@ -62,4 +63,10 @@ clockApp.addEventListener("click", () => {
  listApp.addEventListener("click", () => {
   list.classList.toggle("show");
  })
+
+ //Lock screen===================================
+lock.addEventListener("click", () => {
+  lock.classList.add("display-none")
+})
+
 

@@ -10,6 +10,42 @@ body {
   max-height: 932px;
 }
 
+.lock {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #000000;
+  background-image: url(../../images/TPtop.jpeg);
+  z-index: 6;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 60vh;
+}
+.lock img {
+  position: fixed;
+  z-index: 7;
+}
+
+.lock.display-none {
+  width: 100%;
+  height: 100vh;
+  opacity: 0;
+  background-image: url(../../images/TPtop.jpeg);
+  z-index: -6;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 60vh;
+  animation-name: animatehome;
+  animation-duration: 0.8s;
+  transition: all 1s;
+}
+.lock.display-none img {
+  position: fixed;
+  z-index: -7;
+}
+
 #layout {
   display: flex;
   flex-direction: column;
@@ -181,8 +217,7 @@ button:active {
   background-image: url(../../images/TPtop.jpeg);
   background-repeat: no-repeat;
   background-size: 70vh;
-  min-width: 375px;
-  max-width: 430px;
+  width: 100%;
   height: 80vh;
   display: flex;
   flex-direction: column;
@@ -280,7 +315,7 @@ button:active {
   position: fixed;
   left: 0px;
   margin-bottom: 0;
-  animation: exitAnim 2s ease 0s 1 reverse forwards;
+  animation: exitAnim 0.8s ease 0s 1 reverse forwards;
 }
 
 .show#appslist {
@@ -297,7 +332,7 @@ button:active {
   position: fixed;
   left: 0px;
   margin-bottom: 0;
-  animation: myAnim 2s ease 0s 1 normal forwards;
+  animation: myAnim 0.8s ease 0s 1 normal forwards;
 }
 
 #phonemenu {
@@ -313,7 +348,7 @@ button:active {
   position: fixed;
   align-self: flex-end;
   margin-bottom: 0;
-  animation: exitAnim 2s ease 0s 1 reverse forwards;
+  animation: exitAnim 0.8s ease 0s 1 reverse forwards;
 }
 
 .show#phonemenu {
@@ -328,7 +363,7 @@ button:active {
   z-index: 3;
   align-self: flex-end;
   margin-bottom: 0;
-  animation: myAnim 2s ease 0s 1 normal forwards;
+  animation: myAnim 0.8s ease 0s 1 normal forwards;
 }
 
 .entries {

@@ -10,6 +10,42 @@ body {
   max-height: 932px;
 }
 
+.lock {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #000000;
+  background-image: url(../../images/TPtop.jpeg);
+  z-index: 6;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 60vh;
+  img {
+    position: fixed;
+    z-index: 7;
+  }
+}
+
+.lock.display-none {
+  width: 100%;
+  height: 100vh;
+  opacity: 0;
+  background-image: url(../../images/TPtop.jpeg);
+  z-index: -6;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 60vh;
+  img {
+    position: fixed;
+    z-index: -7;
+  }
+  animation-name: animatehome;
+  animation-duration: 0.8s;
+  transition: all 1s;
+}
+
 #layout {
   display: flex;
   flex-direction: column;
@@ -193,8 +229,7 @@ button {
   background-image: url(../../images/TPtop.jpeg);
   background-repeat: no-repeat;
   background-size: 70vh;
-  min-width: 375px;
-  max-width: 430px;
+  width: 100%;
   height: 80vh;
   display: flex;
   flex-direction: column;
@@ -283,7 +318,6 @@ button {
 }
 
 #appslist {
-
   width: 40%;
   height: fit-content;
   display: grid;
@@ -298,11 +332,10 @@ button {
   left: 0px;
 
   margin-bottom: 0;
-  animation: exitAnim 2s ease 0s 1 reverse forwards;
+  animation: exitAnim 0.8s ease 0s 1 reverse forwards;
 }
 
 .show#appslist {
-
   width: 40%;
   height: fit-content;
   display: grid;
@@ -317,13 +350,12 @@ button {
   left: 0px;
 
   margin-bottom: 0;
-  animation: myAnim 2s ease 0s 1 normal forwards;
+  animation: myAnim 0.8s ease 0s 1 normal forwards;
 }
 
 //phonebook
 
 #phonemenu {
-
   width: 60%;
   height: fit-content;
   display: grid;
@@ -336,11 +368,10 @@ button {
   position: fixed;
   align-self: flex-end;
   margin-bottom: 0;
-  animation: exitAnim 2s ease 0s 1 reverse forwards;
+  animation: exitAnim 0.8s ease 0s 1 reverse forwards;
 }
 
 .show#phonemenu {
-
   width: 60%;
   height: fit-content;
   display: grid;
@@ -352,13 +383,19 @@ button {
   z-index: 3;
   align-self: flex-end;
   margin-bottom: 0;
-  animation: myAnim 2s ease 0s 1 normal forwards;
+  animation: myAnim 0.8s ease 0s 1 normal forwards;
 }
 
 .entries {
   background: #000000;
-  background: linear-gradient(0deg,#000000 0%, #474444 90%, #6c6767 94%, #454343 98%);
-color: #ffffff;
+  background: linear-gradient(
+    0deg,
+    #000000 0%,
+    #474444 90%,
+    #6c6767 94%,
+    #454343 98%
+  );
+  color: #ffffff;
   width: 100%;
   height: 5vh;
   display: flex;
