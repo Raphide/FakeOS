@@ -15,10 +15,7 @@
         <div id="topbar topbar--left">
           <p class="temp" id="clockTop">Clock</p>
         </div>
-        <div id="topbar topbar--left">
-          <p class="temp" id="clockTop">Clock</p>
-        </div>
-        <div id="topbar topbar--mid"><p class="temp">FakeOS</p></div>
+        <div id="topbar topbar--mid"><p class="temp">SycamoreOS</p></div>
         <div id="topbar topbar--right">
           <img src="./images/battery-three-quarters-solid.svg" id="battery" />
         </div>
@@ -58,15 +55,114 @@
         <textarea placeholder="Type your thoughts here"></textarea>
       </div>
       <!--NOTEPADEND-->
+
       <main>
-        <button id="app app--clock">Clock</button>
-        <button id="app app--calc">Calculator</button>
-        <button id="app app--notes">Notepad</button>
+        <section id="app-row">
+          <button id="app app--clock">
+            <img src="./images/clock.svg" class="appIcon" />
+          </button>
+          <button id="app app--calc"><img src="./images/calculator-solid.svg" class="appIcon"></button>
+          <button id="app app--notes"><img src="./images/file-pen-solid.svg" class="appIcon"></button>
+        </section>
+        <section id="menus">
+          <!--Applist-->
+          <div id="appslist">
+            <div class="entries">
+              <img src="./images/calculator-solid.svg" class="icon" />
+              <h5>Calculator</h5>
+            </div>
+            <div class="entries">
+              <img src="./images/clock.svg" class="icon" />
+              <h5>Clock</h5>
+            </div>
+            <div class="entries">
+              <img src="./images/book-solid.svg" class="icon" />
+              <h5>Contacts</h5>
+            </div>
+            <div class="entries">
+              <img src="./images/file-pen-solid.svg" class="icon" />
+              <h5>Notepad</h5>
+            </div>
+            <div class="entries">
+              <img src="./images/TPowl.svg" class="icon" />
+              <h5>Blackjack</h5>
+            </div>
+          </div>
+          <!--Phonebook-->
+          <div id="phonemenu">
+            <div class="entries">
+              <img src="./images/DamnFineCoffee.jpg" class="photo" />
+              <h5>Dale Cooper</h5>
+              <div class="contact">
+                <img
+                  src="./images/phone-solid.svg"
+                  class="contact contact--call"
+                /><img
+                  src="./images/message-solid.svg"
+                  class="contact contact--message"
+                />
+              </div>
+            </div>
+            <div class="entries">
+              <img src="./images/Htruman.jpg" class="photo" />
+              <h5>Harry Truman</h5>
+              <div class="contact">
+                <img
+                  src="./images/phone-solid.svg"
+                  class="contact contact--call"
+                /><img
+                  src="./images/message-solid.svg"
+                  class="contact contact--message"
+                />
+              </div>
+            </div>
+            <div class="entries">
+              <img src="./images/Lucy.jpg" class="photo" />
+              <h5>Lucy Moran</h5>
+              <div class="contact">
+                <img
+                  src="./images/phone-solid.svg"
+                  class="contact contact--call"
+                /><img
+                  src="./images/message-solid.svg"
+                  class="contact contact--message"
+                />
+              </div>
+            </div>
+            <div class="entries">
+              <img src="./images/Gordonc.png" class="photo" />
+              <h5>Gordon Cole</h5>
+              <div class="contact">
+                <img
+                  src="./images/phone-solid.svg"
+                  class="contact contact--call"
+                /><img
+                  src="./images/message-solid.svg"
+                  class="contact contact--message"
+                />
+              </div>
+            </div>
+            <div class="entries">
+              <img src="./images/BOB.jpg" class="photo" />
+              <h5>BOB</h5>
+              <div class="contact">
+                <img
+                  src="./images/phone-solid.svg"
+                  class="contact contact--call"
+                /><img
+                  src="./images/message-solid.svg"
+                  class="contact contact--message"
+                />
+              </div>
+            </div>
+          </div>
+          <!--Phonebookend-->
+        </section>
       </main>
       <div id="bottombar">
-        <button id="menu">menu</button>
-        <button id="home">Home</button>
-        <button id="phonebook">phonebook</button>
+        <button id="app app--list">menu</button>
+        <button id="home"><img src="./images/TPowl.svg" id="homebtn" /></button>
+        <button id="app app--phonebook">phonebook</button>
       </div>
     </div>
   </body>

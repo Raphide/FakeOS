@@ -7,6 +7,10 @@ const clockDisp = document.getElementById("clockdisplay");
 const clockApp = document.getElementById("app app--clock");
 const notes = document.querySelector(".notes");
 const notesApp = document.getElementById("app app--notes");
+const phone = document.getElementById("phonemenu");
+const phoneApp = document.getElementById("app app--phonebook");
+const list = document.getElementById("appslist");
+const listApp = document.getElementById("app app--list");
 
 /// Clock
 function nowTime() {
@@ -50,3 +54,12 @@ clockApp.addEventListener("click", () => {
   clockMod.classList.add("show");
 });
 ///===============================
+ // menu buttons================================
+ phoneApp.addEventListener("click", () => {
+  phone.classList.toggle("show");
+ });
+
+ listApp.addEventListener("click", () => {
+  list.classList.toggle("show");
+ })
+

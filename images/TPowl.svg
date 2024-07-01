@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="95.758 -27.635 500 500" xmlns="http://www.w3.org/2000/svg">
+  <g style="" transform="matrix(1.176015019416809, 0, 0, 1.176015019416809, -51.81837922064037, 53.91707691426686)">
+    <path d="M 253.535 61.536 L 423.201 61.536 L 423.201 231.202 L 253.535 231.202 L 253.535 61.536 Z" style="paint-order: fill; fill-rule: nonzero; fill: none; stroke-width: 36px; transform-box: fill-box; transform-origin: 50% 50%; stroke: rgb(255, 255, 255);" transform="matrix(0.707107, -0.707107, 0.707107, 0.707107, 0.000006, 0.000004)"/>
+    <polyline style="fill: none; stroke-width: 40px; transform-box: fill-box; transform-origin: 50% 50%; stroke: rgb(255, 255, 255);" points="139.459 69.264 192.158 121.322 281.489 36.488" transform="matrix(-1, 0, 0, -1, 0.000023, -0.000002)"/>
+    <polyline style="fill: none; stroke-width: 40px; transform-origin: 464.974px 76.817px; stroke: rgb(255, 255, 255);" points="393.959 86.458 446.658 34.4 535.989 119.234"/>
+  </g>
+</svg>

@@ -3,15 +3,11 @@ body {
 }
 
 #background {
-  background-color: 
-  #000000;
+  background-color: #000000;
   min-width: 375px;
   max-width: 430px;
   min-height: 667px;
   max-height: 932px;
-
-  
-
 }
 
 #layout {
@@ -28,7 +24,9 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  
+  align-items: center;
+  z-index: 5;
+
   #battery {
     height: 2.75em;
     width: 2.75em;
@@ -46,13 +44,17 @@ main {
   max-width: 430px;
   height: 80vh;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
   background-image: url(../../images/TPtop.jpeg);
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: 60vh;
+  #app-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 #bottombar {
@@ -66,31 +68,85 @@ main {
   background-image: url(../../images/TPbottom.jpeg);
   background-position: top;
   background-size: 100%;
+  z-index: 5;
 }
 
 button {
   height: 7em;
   width: 7em;
-  background-color: rgba(47, 47, 47,0.5); //keep these settings
+  background-color: rgba(0, 0, 0, 0.5); //keep these settings
   backdrop-filter: blur(2px);
   color: white;
   margin: 1em 1em 1em 1em;
   border-radius: 15px;
   border: none;
-  
+  padding: 0;
 
   &:active {
     background-color: rgba(255, 255, 255, 0.75);
     color: #000000;
   }
+}
 
+.appIcon {
+  height: 6em;
 }
 
 #home {
   border-radius: 7em;
 }
+
+//animations
+@keyframes animatehome {
+  from {
+    top: 0;
+    opacity: 1;
+  }
+  to {
+    top: -300px;
+    opacity: 0;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+@keyframes myAnim {
+  from {
+    opacity: 0;
+    transform: translateY(250px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes exitAnim {
+  0% {
+    opacity: 0;
+    transform: translateY(250px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+//clock
 .clock {
   display: none;
+  animation-name: animatehome;
+  animation-duration: 0.4s;
 }
 
 .show.clock {
@@ -100,13 +156,17 @@ button {
   justify-content: center;
   align-items: center;
   background-color: rgb(75, 5, 5);
+  background-image: url(../../images/TPtop.jpeg);
+  background-size: 70vh;
   color: white;
   min-width: 375px;
   max-width: 430px;
   height: 80vh;
   width: 100%;
   margin: 5vh 0vw 15vh 0vw;
-  z-index: 300;
+  z-index: 2;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
 
   #clockdisplay {
     display: flex;
@@ -127,60 +187,59 @@ button {
   display: none;
 }
 
-
 .show.calculator {
-    position: fixed;
-    background-color: #d80001;
-    background-image: url(../../images/tpbg2.jpg);
-    background-position: 50% 200%;
-    background-repeat: no-repeat;
-    min-width: 375px;
-    max-width: 430px;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 5vh 0vw 15vh 0vw;
-    z-index: 200;
-    
-    
-  
-    #display {
-      width: 100%;
-      height: 10vh;
-      font-size: 5em;
-      margin-top: 3vh;
-      border: none;
+  position: fixed;
+  background-color: #d80001;
+  background-image: url(../../images/TPtop.jpeg);
+  background-repeat: no-repeat;
+  background-size: 70vh;
+  min-width: 375px;
+  max-width: 430px;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 5vh 0vw 15vh 0vw;
+  z-index: 2;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+
+  #display {
+    width: 90%;
+    height: 10vh;
+    font-size: 5em;
+    margin-top: 3vh;
+    border: none;
+    text-align: end;
+  }
+
+  #keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin: 3em 0em 0em 0em;
+  }
+
+  .calcbtn {
+    height: 10vh;
+    width: 20vw;
+    margin: 1vh 1vw 0vh 1vw;
+    border-radius: 50px;
+    border: 5px solid none;
+    background-color: white;
+    color: #000000;
+    font-size: 2em;
+
+    &:active {
+      background-color: rgb(219, 219, 219);
     }
-
-    #keys {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-      justify-content: flex-start;
-     margin: 3em 2em 0em 2em;
-     
+    &--operator {
+      background-color: #d80001;
+      color: white;
     }
-  
-    .calcbtn {
-      height: 5.7em;
-      width: 5.7em;
-      margin: 0.5em 0.5em 0em 0.5em;
-      border-radius: 50px;
-      border: 5px solid #000000;
-      background-color: white;
-      background-image: none;
-      box-shadow: none;
-      &:active {
-        background-color: rgb(219, 219, 219);
-
-      }
-      &--operator {
-        background-color: #000000;
-        color: white;
-
-      }
   }
 }
 ///-------------
@@ -196,20 +255,143 @@ button {
   align-items: center;
   margin: 5vh 0vw 15vh 0vw;
   position: fixed;
-  z-index: 400;
+  z-index: 2;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
   h3 {
     font-size: 2em;
     font-family: Arial, Helvetica, sans-serif;
   }
   textarea {
     font-size: 2em;
-    border:none;
+    border: none;
     width: 90%;
     height: 40vh;
-    
   }
 }
 
 .notes {
   display: none;
+}
+
+#menus {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+#appslist {
+
+  width: 40%;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin: 5vh 0vw 15vh 0vw;
+  z-index: 4;
+  align-self: flex-end;
+  position: fixed;
+  left: 0px;
+
+  margin-bottom: 0;
+  animation: exitAnim 2s ease 0s 1 reverse forwards;
+}
+
+.show#appslist {
+
+  width: 40%;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin: 5vh 0vw 15vh 0vw;
+  z-index: 4;
+  align-self: flex-end;
+  position: fixed;
+  left: 0px;
+
+  margin-bottom: 0;
+  animation: myAnim 2s ease 0s 1 normal forwards;
+}
+
+//phonebook
+
+#phonemenu {
+
+  width: 60%;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin: 5vh 0vw 15vh 0vw;
+  z-index: 3;
+  position: fixed;
+  align-self: flex-end;
+  margin-bottom: 0;
+  animation: exitAnim 2s ease 0s 1 reverse forwards;
+}
+
+.show#phonemenu {
+
+  width: 60%;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin: 5vh 0vw 15vh 0vw;
+  z-index: 3;
+  align-self: flex-end;
+  margin-bottom: 0;
+  animation: myAnim 2s ease 0s 1 normal forwards;
+}
+
+.entries {
+  background: #000000;
+  background: linear-gradient(0deg,#000000 0%, #474444 90%, #6c6767 94%, #454343 98%);
+color: #ffffff;
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  &:active {
+    background-color: gray;
+  }
+  .photo {
+    height: 32px;
+    width: 32px;
+    border-radius: 60%;
+    margin-left: 2vw;
+  }
+  .icon {
+    height: 32px;
+    width: 32px;
+    margin-left: 2vw;
+  }
+  h5 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    margin-right: 1vw;
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 20vw;
+    height: 1.5em;
+  }
 }
