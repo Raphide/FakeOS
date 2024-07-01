@@ -12,10 +12,16 @@
     <div id="layout">
       <!-- background image or effects only need to go here. everything else will be in front-->
       <div id="topbar">
-        <div id="topbar topbar--left"><p class="temp" id="clockTop">Clock</p></div>
-        <div id="topbar topbar--left"><p class="temp" id="clockTop">Clock</p></div>
+        <div id="topbar topbar--left">
+          <p class="temp" id="clockTop">Clock</p>
+        </div>
+        <div id="topbar topbar--left">
+          <p class="temp" id="clockTop">Clock</p>
+        </div>
         <div id="topbar topbar--mid"><p class="temp">FakeOS</p></div>
-        <div id="topbar topbar--right"><img src="./images/battery-three-quarters-solid.svg" id="battery"></div>
+        <div id="topbar topbar--right">
+          <img src="./images/battery-three-quarters-solid.svg" id="battery" />
+        </div>
       </div>
       <!--CLOCK-->
       <div class="clock">
@@ -23,86 +29,43 @@
       </div>
       <!--CLOCKEND-->
       <!--CALCULATOR-->
-      <div class ="calculator"> 
-        <input id="display" readonly>
+      <div class="calculator">
+        <input id="display" readonly />
         <div id="keys">
-            <button class="calcbtn calcbtn--operator" id="+">+</button>
-            <button class="calcbtn" id="7">7</button>
-            <button class="calcbtn" id="8">8</button>
-            <button class="calcbtn" id="9">9</button>
-            <button class="calcbtn calcbtn--operator" id="-">-</button>
-            <button class="calcbtn" id="4">4</button>
-            <button class="calcbtn" id="5">5</button>
-            <button class="calcbtn" id="6">6</button>
-            <button class="calcbtn calcbtn--operator" id="*">x</button>
-            <button class="calcbtn" id="1">1</button>
-            <button class="calcbtn" id="2">2</button>
-            <button class="calcbtn" id="3">3</button>
-            <button class="calcbtn calcbtn--operator" id="/">/</button>
-            <button class="calcbtn" id="0">0</button>
-            <button class="calcbtn" id=".">.</button>
-            <button class="calcbtn" id="=">=</button>
-            <button class="calcbtn calcbtn--operator" id="C">C</button>
+          <button class="calcbtn calcbtn--operator" id="+">+</button>
+          <button class="calcbtn" id="7">7</button>
+          <button class="calcbtn" id="8">8</button>
+          <button class="calcbtn" id="9">9</button>
+          <button class="calcbtn calcbtn--operator" id="-">-</button>
+          <button class="calcbtn" id="4">4</button>
+          <button class="calcbtn" id="5">5</button>
+          <button class="calcbtn" id="6">6</button>
+          <button class="calcbtn calcbtn--operator" id="*">x</button>
+          <button class="calcbtn" id="1">1</button>
+          <button class="calcbtn" id="2">2</button>
+          <button class="calcbtn" id="3">3</button>
+          <button class="calcbtn calcbtn--operator" id="/">/</button>
+          <button class="calcbtn" id="0">0</button>
+          <button class="calcbtn" id=".">.</button>
+          <button class="calcbtn" id="=">=</button>
+          <button class="calcbtn calcbtn--operator" id="C">C</button>
         </div>
-      </div> <!--CALULATOREND-->
+      </div>
+      <!--CALULATOREND-->
       <!--NOTEPAD-->
       <div class="notes">
         <h3>Notepad</h3>
         <textarea placeholder="Type your thoughts here"></textarea>
-
       </div>
       <!--NOTEPADEND-->
       <main>
         <button id="app app--clock">Clock</button>
         <button id="app app--calc">Calculator</button>
         <button id="app app--notes">Notepad</button>
-
-
       </main>
       <div id="bottombar">
         <button id="menu">menu</button>
         <button id="home">Home</button>
-        <button id="phonebook">phonebook</button>
-      </div>
-    </div>
-  </body>
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FakeOS</title>
-    <script defer src="./javascript/script.js"></script>
-    <link rel="stylesheet" href="./styles/css/styles.css" />
-  </head>
-  <body id="background">
-    <div id="layout">
-      <!-- background image or effects only need to go here. everything else will be in front-->
-      <div id="topbar">
-        <div id="topbar topbar--left"><p class="temp" id="clockTop">Clock</p></div>
-        <div id="topbar topbar--mid"><p class="temp">FakeOS</p></div>
-        <div id="topbar topbar--right"><img src="./images/battery-three-quarters-solid.svg" id="battery"></p></div>
-      </div>
-      <!--CLOCK-->
-      <div class="clock">
-        <div id="clockdisplay"></div>
-      </div>
-      <!--CLOCKEND-->
-      <!--CALCULATOR-->
-      <div class ="calculator"> 
-      </div> <!--CALULATOREND-->
-      <main>
-        <button id="app app--clock"><img src="./images/clock.png" id="clockbtn"></button>
-        <button id="app app--calc">Calculator</button>
-        <button id="app app--notes">Notepad</button>
-
-
-      </main>
-      <div id="bottombar">
-        <button id="menu">menu</button>
-        <button id="home"><img src="./images/noun-owl-1181241.svg"></button>
         <button id="phonebook">phonebook</button>
       </div>
     </div>
