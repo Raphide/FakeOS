@@ -1,15 +1,72 @@
+@mixin app-layout {
+  position: fixed;
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 5vh 0vw 15vh 0vw;
+  z-index: 2;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
 body {
   margin: 0%;
 }
 
 #background {
-  background-color: 
-  #000000;
+  background-color: #000000;
   min-width: 375px;
   max-width: 430px;
   min-height: 667px;
   max-height: 932px;
-  
+}
+
+.lock {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #000000;
+  background-image: url(../../images/TPtop.jpeg);
+  z-index: 6;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    color: #ffffff;
+    z-index: 7;
+    position: fixed;
+    bottom: 10vh;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  img {
+    position: fixed;
+    z-index: 7;
+  }
+}
+
+.lock.hide {
+  width: 100%;
+  height: 100vh;
+  opacity: 0;
+  background-image: url(../../images/TPtop.jpeg);
+  z-index: -6;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 60vh;
+  img {
+    position: fixed;
+    z-index: -7;
+  }
+  animation-name: animatehome;
+  animation-duration: 0.8s;
+  transition: all 1s;
 }
 
 #layout {
@@ -26,7 +83,9 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  
+  align-items: center;
+  z-index: 5;
+
   #battery {
     height: 2.75em;
     width: 2.75em;
@@ -44,13 +103,17 @@ main {
   max-width: 430px;
   height: 80vh;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
   background-image: url(../../images/TPtop.jpeg);
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: 60vh;
+  #app-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 #bottombar {
@@ -64,25 +127,304 @@ main {
   background-image: url(../../images/TPbottom.jpeg);
   background-position: top;
   background-size: 100%;
+  z-index: 5;
 }
 
 button {
   height: 7em;
   width: 7em;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0.5); //keep these settings
+  backdrop-filter: blur(2px);
+  color: white;
   margin: 1em 1em 1em 1em;
   border-radius: 15px;
   border: none;
-  background-image: url(../../images/marble.png);
-  background-position: center;
-  box-shadow: -4px -2px 5px 0px rgba(0,0,0,0.56) inset;
-  &:active {
-    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.55) inset;
-  }
+  padding: 0;
 
+  &:active {
+    background-color: rgba(255, 255, 255, 0.75);
+    color: #000000;
+  }
+}
+
+.appIcon {
+  height: 6em;
 }
 
 #home {
   border-radius: 7em;
 }
 
+//animations
+@keyframes animatehome {
+  from {
+    top: 0;
+    opacity: 1;
+  }
+  to {
+    top: -300px;
+    opacity: 0;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+@keyframes myAnim {
+  from {
+    opacity: 0;
+    transform: translateY(250px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes exitAnim {
+  0% {
+    opacity: 0;
+    transform: translateY(250px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+//clock
+.clock {
+  display: none;
+  animation-name: animatehome;
+  animation-duration: 0.4s;
+}
+
+.show.clock {
+  @include app-layout;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../../images/TPtop.jpeg);
+  background-size: 70vh;
+  color: white;
+
+  #clockdisplay {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 5em;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    background-color: rgb(52, 26, 26);
+    border-radius: 15px;
+    box-shadow: -8px -7px 24px 9px rgba(0, 0, 0, 0.56) inset;
+    width: 80%;
+  }
+}
+
+///Calculator
+
+.calculator {
+  display: none;
+}
+
+.show.calculator {
+  @include app-layout;
+  background-image: url(../../images/TPtop.jpeg);
+  background-repeat: no-repeat;
+  background-size: 70vh;
+  justify-content: flex-start;
+  align-items: center;
+
+  #display {
+    width: 90%;
+    height: 10vh;
+    font-size: 5em;
+    margin-top: 3vh;
+    border: none;
+    text-align: end;
+    background-color: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(2px);
+    color: white;
+  }
+
+  #keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin: 3em 0em 0em 0em;
+  }
+
+  .calcbtn {
+    height: 10vh;
+    width: 20vw;
+    margin: 1vh 1vw 0vh 1vw;
+    border-radius: 50px;
+    border: 5px solid none;
+    background-color: white;
+    color: #000000;
+    font-size: 2em;
+
+    &:active {
+      background-color: rgb(219, 219, 219);
+    }
+    &--operator {
+      background-color: #d80001;
+      color: white;
+    }
+  }
+}
+///-------------
+.show.notes {
+  @include app-layout;
+  background-color: #ffffff;
+  justify-content: flex-start;
+  align-items: center;
+  h3 {
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  textarea {
+    font-size: 2em;
+    border: none;
+    width: 90%;
+    height: 40vh;
+  }
+}
+
+.notes {
+  display: none;
+}
+
+#menus {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+#appslist {
+  width: 40%;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin: 5vh 0vw 15vh 0vw;
+  z-index: 4;
+  align-self: flex-end;
+  position: fixed;
+  left: 0px;
+
+  margin-bottom: 0;
+  animation: exitAnim 0.8s ease 0s 1 reverse forwards;
+}
+
+.show#appslist {
+  width: 40%;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin: 5vh 0vw 15vh 0vw;
+  z-index: 4;
+  align-self: flex-end;
+  position: fixed;
+  left: 0px;
+
+  margin-bottom: 0;
+  animation: myAnim 0.8s ease 0s 1 normal forwards;
+}
+
+//phonebook
+
+#phonemenu {
+  width: 60%;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin: 5vh 0vw 15vh 0vw;
+  z-index: 3;
+  position: fixed;
+  align-self: flex-end;
+  margin-bottom: 0;
+  animation: exitAnim 0.8s ease 0s 1 reverse forwards;
+}
+
+.show#phonemenu {
+  width: 60%;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin: 5vh 0vw 15vh 0vw;
+  z-index: 3;
+  align-self: flex-end;
+  margin-bottom: 0;
+  animation: myAnim 0.8s ease 0s 1 normal forwards;
+}
+
+.entries {
+  background: #000000;
+  background: linear-gradient(
+    0deg,
+    #000000 0%,
+    #474444 90%,
+    #6c6767 94%,
+    #454343 98%
+  );
+  color: #ffffff;
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  &:active {
+    background-color: gray;
+  }
+  .photo {
+    height: 32px;
+    width: 32px;
+    border-radius: 60%;
+    margin-left: 2vw;
+  }
+  .icon {
+    height: 32px;
+    width: 32px;
+    margin-left: 2vw;
+  }
+  h5 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    margin-right: 1vw;
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 20vw;
+    height: 1.5em;
+  }
+}

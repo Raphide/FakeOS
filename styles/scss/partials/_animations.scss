@@ -1,0 +1,47 @@
+
+
+//animations
+@keyframes animatehome {
+    from {
+      top: 0;
+      opacity: 1;
+    }
+    to {
+      top: -300px;
+      opacity: 0;
+    }
+  }
+  
+  @keyframes animatetop {
+    from {
+      top: -300px;
+      opacity: 0;
+    }
+    to {
+      top: 0;
+      opacity: 1;
+    }
+  }
+  @keyframes myAnim {
+      from {
+          opacity: 0;
+          transform: translateY(250px);
+      }
+  
+      to {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
+  
+  @keyframes exitAnim {
+      0% {
+          opacity: 0;
+          transform: translateY(250px);
+      }
+  
+      100% {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
